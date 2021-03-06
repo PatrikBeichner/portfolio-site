@@ -1,33 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel='stylesheet' href='/css/styles.css' />
+    <link rel="stylesheet" href="/css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
-    
-    <title>Patrik Beichner</title>
-</head>
-<body>
-    <div class='navbar'>
-        <ul class='nav'>
-            <li>Logo</li>
-            <li>about</li>
-            <li>Projects</li>
-            <li>Contact</li>
-        </ul>
-    </div>
-    
 
-    <div class='contact'>
-        <ul>
-            <li><a href='https://twitter.com/PatrikBeichner'>twitter</a></li>
-            <li><a href='https://github.com/PatrikBeichner'>github</a></li>
-            <li><a href='https://www.linkedin.com/in/patrik-b-974b34ab/'>linkedin</a></li>
-        </ul>
+    <title>Patrik Beichner</title>
+  </head>
+  <body>
+    <!-- <div class="navbar">
+      <ul class="nav">
+        <li>Logo</li>
+        <li>about</li>
+        <li>Projects</li>
+        <li>Contact</li>
+      </ul>
+    </div> -->
+
+    <div class="personal">
+      <h1 id="greetingDisplay"></h1>
+      <div class="text">
+        <h2>I'm Patrik, a full stack developer. I work with HTML, CSS, Javascript, React, MongoDB, Express, and Node.js.</h2>
+        <h2>You can find my work and contact info at the links below.</h2>
+      </div>
     </div>
-</body>
+
+    <div class="contact">
+      <ul>
+          <li><a href='#'>blog</a></li>
+        <li><a href="https://twitter.com/PatrikBeichner">twitter</a></li>
+        <li><a href="https://github.com/PatrikBeichner">github</a></li>
+        <li><a href="https://www.linkedin.com/in/patrik-b-974b34ab/">linkedin</a></li>
+      </ul>
+    </div>
+    <script>
+      const greetings = ['Hello,', 'Hej,', 'Salut,', 'Hallo,', 'Hola,', 'Privet,'];
+
+      !(function newGreeting() {
+        let randGreet = Math.floor(Math.random() * greetings.length);
+        document.getElementById('greetingDisplay').innerHTML = greetings[randGreet];
+      })();
+    </script>
+  </body>
 </html>
