@@ -1,5 +1,39 @@
+body {
+    margin: 0;
+    background-color: lightblue;
+    ;
+}
+
+.navbar {
+    min-height: 4em;
+    background-color: rgb(32, 30, 35);
+    margin: 0;
+    position: relative;
+
+}
+
+.nav{ 
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+
 .nav li {
     display: inline;
+    margin-top: 0;
     font-size: 1.5rem;
+    color: white;
     font-family: 'Josefin Sans', sans-serif;
+}
+
+.contact ul {
+    list-style-type: none;
+}
+
+.contact a {
+    text-decoration: none;
+    color: white;
+    font-family: 'Lato', sans-serif;
+    font-size: 1em;
+
 }
