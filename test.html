@@ -87,8 +87,10 @@
 
           star.style.top = randomTop + 'px';
           star.style.left = randomLeft + 'px';
+          star.style.webkitAnimationDelay=Math.random()+'s';
 
           console.log('stars')
+          console.log(star.style.webkitAnimationDelay)
           starfield.appendChild(star);
         }
       }
