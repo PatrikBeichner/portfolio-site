@@ -87,8 +87,9 @@
 
           star.style.top = randomTop + 'px';
           star.style.left = randomLeft + 'px';
-          star.style.webkitAnimationDelay=Math.random()+'s';
-
+          star.style.webkitAnimationDelay=Math.random()+1 +'s';
+          star.style.fontSize = (Math.random() * (2 - .83) + .83) + 'em';
+          
           console.log('stars')
           console.log(star.style.webkitAnimationDelay)
           starfield.appendChild(star);

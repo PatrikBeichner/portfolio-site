@@ -19,7 +19,7 @@ body {
 h3 {
     color: white;
     position: absolute;
-    animation: blinker 3s linear infinite;
+    animation: blinker 5s linear infinite;
   }
 
   
