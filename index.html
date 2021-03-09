@@ -79,14 +79,16 @@
         for (let i = 0; i < numStars; i++) {
           const star = document.createElement("h3")
           star.innerHTML = '*'
-          let randomTop = Math.floor(Math.random()* 800 + 1);
-          let randomLeft = Math.floor(Math.random() * 1900 + 1);
+          let randomTop = Math.floor(Math.random()* vh);
+          let randomLeft = Math.floor(Math.random() * vw);
           console.log(randomTop)
           console.log(randomLeft)
 
 
           star.style.top = randomTop + 'px';
           star.style.left = randomLeft + 'px';
+          star.style.webkitAnimationDelay=Math.random()+1 +'s';
+          star.style.fontSize = (Math.random() * (2 - .83) + .83) + 'em';
 
           console.log('stars')
           starfield.appendChild(star);
