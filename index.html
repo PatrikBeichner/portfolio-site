@@ -14,15 +14,6 @@
   </head>
   <body>
     <div id="bground">
-      <!-- <div class="navbar">
-      <ul class="nav">
-        <li>Logo</li>
-        <li>about</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
-    </div> -->
-
       <div class="personal">
         <h1 id="greetingDisplay"></h1>
         <div class="text">
@@ -57,39 +48,43 @@
     </div>
     <script>
       const greetings = ['Hello,', 'Hej,', 'Salut,', 'Hallo,', 'Hola,', 'Privet,'];
-
+      //randomly select and show a greeting from list of greetings
       !(function newGreeting() {
         let randGreet = Math.floor(Math.random() * greetings.length);
         document.getElementById('greetingDisplay').innerHTML = greetings[randGreet];
       })();
     </script>
     <script>
+      // get size of viewing area
       const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
       const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
       console.log(vw, vh)
 
       let numStars = 23;
       const starfield = document.getElementById('bground');
-
+      //run on load
       window.addEventListener('load', generateStars);
 
       function generateStars() {
         // event.stopPropagation;
-
+        //create stars and place them randomly based on width and height
         for (let i = 0; i < numStars; i++) {
           const star = document.createElement("h3")
           star.innerHTML = '*'
           let randomTop = Math.floor(Math.random()* vh);
           let randomLeft = Math.floor(Math.random() * vw);
+          
+          //tests
           console.log(randomTop)
           console.log(randomLeft)
 
-
+          //star styling
           star.style.top = randomTop + 'px';
           star.style.left = randomLeft + 'px';
           star.style.webkitAnimationDelay=Math.random()+1 +'s';
           star.style.fontSize = (Math.random() * (2 - .83) + .83) + 'em';
 
+          //test
           console.log('stars')
           starfield.appendChild(star);
         }
