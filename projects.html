@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <div class='card'>
-        <img src='https://via.placeholder.com/400' alt='placeholder' style='width:100%'>
-        <div class='container'>
-            <h4><b>Reise Norge</b></h4>
-            <p>travel company website</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+
+    <title>Projects</title>
+  </head>
+  <body>
+    <div id="bground">
+      <div class="card">
+        <img src="public/norge.png" alt="reise norge screenshot" style="height: auto; width: auto; max-width: 300px" />
+        <div class="container">
+          <h4><b>Reise Norge</b></h4>
+          <p>travel company website</p>
         </div>
+      </div>
     </div>
-</body>
+    <script>
+      let numStars = 23;
+      const starfield = document.getElementById('bground');
+      //run on load
+      window.addEventListener('load', generateStars);
+
+      function generateStars() {
+        // event.stopPropagation;
+        //create stars and place them randomly based on width and height
+        for (let i = 0; i < numStars; i++) {
+          const star = document.createElement('h3');
+          star.innerHTML = '*';
+          let randomTop = Math.floor(Math.random() * vh);
+          let randomLeft = Math.floor(Math.random() * vw);
+
+          //tests
+          console.log(randomTop);
+          console.log(randomLeft);
+
+          //star styling
+          star.style.top = randomTop + 'px';
+          star.style.left = randomLeft + 'px';
+          star.style.webkitAnimationDelay = Math.random() + 1 + 's';
+          star.style.fontSize = Math.random() * (2 - 0.83) + 0.83 + 'em';
+
+          //test
+          console.log('stars');
+          starfield.appendChild(star);
+        }
+      }
+    </script>
+  </body>
 </html>
