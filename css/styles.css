@@ -124,3 +124,9 @@ ul > li {
 .container {
     padding: 2px 16px;
 }
+
+.cardImg {
+    height: auto; 
+    width: auto; 
+    max-width: 300px
+}
