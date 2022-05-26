@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="stylesheet" href="/css/styles.css" />
+    <link rel="stylesheet" href="css/styles.css" />
     <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
 
@@ -79,14 +79,15 @@
         for (let i = 0; i < numStars; i++) {
           const star = document.createElement("h3")
           star.innerHTML = '*'
-          let randomTop = Math.floor(Math.random()* 800 + 1);
-          let randomLeft = Math.floor(Math.random() * 1900 + 1);
+          let randomTop = Math.floor(Math.random()* vh);
+          let randomLeft = Math.floor(Math.random() * vw);
           console.log(randomTop)
           console.log(randomLeft)
 
 
           star.style.top = randomTop + 'px';
           star.style.left = randomLeft + 'px';
+          star.style.animationDelay = Math.random() * 9 + 's'
 
           console.log('stars')
           starfield.appendChild(star);
