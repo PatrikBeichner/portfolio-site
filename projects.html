@@ -13,8 +13,14 @@
   </head>
   <body>
     <div id="bground">
+      <div class="navbar">
+        <ul>
+          <li><a href="#">Home</a></li>
+        </ul>
+      </div>
       <div class="card">
-        <img src="public/norge.png" alt="reise norge screenshot" style="height: auto; width: auto; max-width: 300px" />
+        <h1>Projects</h1>
+        <img src="public/norge.png" alt="reise norge screenshot" class="cardImg" />
         <div class="container">
           <h4><b>Reise Norge</b></h4>
           <p>travel company website</p>
@@ -51,6 +57,7 @@
           star.style.left = randomLeft + 'px';
           star.style.webkitAnimationDelay = Math.random() + 1 + 's';
           star.style.fontSize = Math.random() * (2 - 0.83) + 0.83 + 'em';
+          star.style.zIndex = 0;
 
           //test
           console.log('stars');
