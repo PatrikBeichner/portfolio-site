@@ -85,6 +85,12 @@ p {
     color: rgb(238, 238, 238);
 }
 
+section {
+    height: 90vh;
+    margin:0;
+    padding:2.5rem 4rem;
+  }
+
 .personal {
   margin: auto;
   width: 50%;
