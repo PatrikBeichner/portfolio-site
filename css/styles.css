@@ -3,7 +3,7 @@ body {
     background-color: rgb(32, 30, 35);
 }
 
-.navbar {
+.nav {
     min-height: 4em;
     background-color: rgb(32, 30, 35);
     margin: 0;
@@ -29,10 +29,12 @@ h3 {
     }
   }
 
-.nav{ 
+.nav ul{ 
     list-style-type: none;
-    margin: 0;
+    margin: 10px;
     padding: 0;
+    position: sticky;
+    top: 0;
   }
 
 .nav li {
@@ -46,6 +48,9 @@ h3 {
 .nav a {
     text-decoration: none;
     color:rgb(238, 238, 238)
+}
+.right {
+    float: right;
 }
 
 .contact {
