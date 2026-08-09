@@ -106,7 +106,7 @@ ul > li {
     display: inline-block;
     /* You can also add some margins here to make it look prettier */
     zoom:1;
-    *display:inline;
+    display:inline;
     padding-right: 6rem;
     /* this fix is needed for IE7- */
 }
@@ -156,12 +156,13 @@ ul > li {
 }
 
 .cardImg {
-    height: auto; 
-    width: auto; 
+    height: auto;
+    width: auto;
     max-width: 50%;
 
 }
 
 .links {
     display: flex;
+    color: white;
 }
