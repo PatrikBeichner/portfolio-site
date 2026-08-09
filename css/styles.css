@@ -162,4 +162,11 @@ ul > li {
 
 .links {
   display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.links a {
+  display: inline-block;
+  margin-top: 0.25rem;
 }
