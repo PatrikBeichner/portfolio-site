@@ -19,7 +19,7 @@
           <li><a href="index.html">Home</a></li>
           <li class="right"><a href="contact.html">Contact</a></li>
           <li class="right"><a href="projects.html">Projects</a></li>
-          <li class="right"><a href="about.html">About</a></li>
+          <!-- <li class="right"><a href="about.html">About</a></li> -->
         </ul>
       </div>
       <div class="personal">
@@ -69,7 +69,7 @@
       // get size of viewing area
       const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
       const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-      console.log(vw, vh)
+      //console.log(vw, vh)
 
       let numStars = 23;
       const starfield = document.getElementById('bground');
@@ -84,10 +84,9 @@
           star.innerHTML = '*'
           let randomTop = Math.floor(Math.random()* vh);
           let randomLeft = Math.floor(Math.random() * vw);
-          
           //tests
-          console.log(randomTop)
-          console.log(randomLeft)
+          //console.log(randomTop)
+          //console.log(randomLeft)
 
           //star styling
           star.style.top = randomTop + 'px';
@@ -97,7 +96,7 @@
           star.style.zIndex = 0;
 
           //test
-          console.log('stars')
+          //console.log('stars')
           starfield.appendChild(star);
         }
       }

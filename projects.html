@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,19 +27,19 @@
         <div class="container">
           <h4><b>Reise Norge</b></h4>
           <p>travel company website</p>
-          <div class='links'>
+          <div class="links">
             <p><a href="https://heuristic-colden-1cb820.netlify.app/">html version</a></p>
             <p><a href="https://github.com/PatrikBeichner/portfolio-project">github</a></p>
           </div>
         </div>
       </div>
     </div>
-    
+
     <script>
-        // get size of viewing area
-      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
-      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
-      console.log(vw, vh)
+      // get size of viewing area
+      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0);
+      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0);
+      console.log(vw, vh);
 
       let numStars = 23;
       const starfield = document.getElementById('bground');
@@ -56,8 +56,8 @@
           let randomLeft = Math.floor(Math.random() * vw);
 
           //tests
-          console.log(randomTop);
-          console.log(randomLeft);
+          //console.log(randomTop);
+          //console.log(randomLeft);
 
           //star styling
           star.style.top = randomTop + 'px';
@@ -67,7 +67,7 @@
           star.style.zIndex = 0;
 
           //test
-          console.log('stars');
+          //console.log('stars');
           starfield.appendChild(star);
         }
       }
