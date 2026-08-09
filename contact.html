@@ -3,9 +3,67 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Lato&display=swap" rel="stylesheet" />
+    
     <title>Contact</title>
 </head>
 <body>
-    
-</body>
+    <div id="bground">
+      <div class="nav">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li class="right"><a href="contact.html">Contact</a></li>
+          <li class="right"><a href="projects.html">Projects</a></li>
+          <!-- <li class="right"><a href="about.html">About</a></li> -->
+        </ul>
+      </div>
+      <div class="personal">
+        <div class="text">
+          <h2>
+            I can be reached <a href="mailto:patrik.beichner@gmail.com">here</a>          </h2>
+          <h3 style="top: 449px; left: 991px;">*</h3>
+        </div>
+      </div>
+      </div>
+    </div>
+    <script>
+      // get size of viewing area
+      const vw = Math.max(document.documentElement.clientWidth || 0, window.innerWidth || 0)
+      const vh = Math.max(document.documentElement.clientHeight || 0, window.innerHeight || 0)
+      //console.log(vw, vh)
+
+      let numStars = 23;
+      const starfield = document.getElementById('bground');
+      //run on load
+      window.addEventListener('load', generateStars);
+
+      function generateStars() {
+        // event.stopPropagation;
+        //create stars and place them randomly based on width and height
+        for (let i = 0; i < numStars; i++) {
+          const star = document.createElement("h3")
+          star.innerHTML = '*'
+          let randomTop = Math.floor(Math.random()* vh);
+          let randomLeft = Math.floor(Math.random() * vw);
+          //tests
+          //console.log(randomTop)
+          //console.log(randomLeft)
+
+          //star styling
+          star.style.top = randomTop + 'px';
+          star.style.left = randomLeft + 'px';
+          star.style.webkitAnimationDelay=Math.random()+1 +'s';
+          star.style.fontSize = (Math.random() * (2 - .83) + .83) + 'em';
+          star.style.zIndex = 0;
+
+          //test
+          //console.log('stars')
+          starfield.appendChild(star);
+        }
+      }
+    </script>
+  </body>
 </html>
